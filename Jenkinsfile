@@ -18,6 +18,6 @@ sshScript remote: remote, script: "shaik01.sh"
  sshCommand remote: remote, command: "pwd"
  }
   stage('step2'){
- sshRemove remote: remote, path: "/home/opc"
+ sshRemove remote: remote, path: "/home/opc/shaik01.sh"
  }
 }
