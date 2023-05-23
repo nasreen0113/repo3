@@ -8,22 +8,7 @@ node{
     stage('checkout') {
            checkout scm
   }  
-  stage('Remote SSH') {
-   // writeFile file: 'jenkinsfile.sh', text: 'ls -lrt'
-   // sshScript remote: remote, script: "jenkinsfile.sh"
-    sshCommand remote : remote, command: "pwd"
-      sshCommand remote : remote, command: "cd /home"
-    sshCommand remote : remote, command: "pwd"
-      sshCommand remote : remote, command: "ls -lrt"
-  }     
-  
-   stage('Remote SSH 2') {
-    writeFile file: 'jenkinsfile.sh', text: 'ls -lrt'
-    sshScript remote: remote, script: "jenkinsfile.sh"
+   stage('step 1') {
+   
   }
 }
-  
-  stage('Remote SSH 3') {
-   sshScript remote: remote, script: "./micro/args.sh"
-  }  
-        }
