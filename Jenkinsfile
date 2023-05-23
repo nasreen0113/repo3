@@ -12,9 +12,9 @@ node{
   sshPut remote: remote, from: 'shaik01.sh', into: '/home/opc'
  }
   stage('step2'){
-sshScript remote: remote, script: "shaik01.sh"
- }
-  stage('step2'){
+     sshCommand remote: remote, command: "sudo sh /home/opc/shaik01.sh"
+    } 
+   stage('step2'){
  sshCommand remote: remote, command: "pwd"
  }
   stage('step2'){
